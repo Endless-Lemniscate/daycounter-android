@@ -1,2 +1,4 @@
-rootProject.name = "Deadline app"
-include ':app'
+rootProject.name = "Day Counter"
+include ':presentation'
+include ':domain'
+include ':data'
