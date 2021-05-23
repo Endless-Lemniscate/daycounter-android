@@ -1,1 +1,1 @@
-# deadlineapp
+# Day counter android app
