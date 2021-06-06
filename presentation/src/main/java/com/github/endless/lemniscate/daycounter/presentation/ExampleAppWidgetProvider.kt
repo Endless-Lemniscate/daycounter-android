@@ -7,6 +7,7 @@ import android.content.Context
 import android.content.Intent
 import android.widget.RemoteViews
 import com.github.endless.lemniscate.daycounter.R
+import com.github.endless.lemniscate.daycounter.presentation.ui.MainActivity
 import java.util.*
 
 class ExampleAppWidgetProvider: AppWidgetProvider() {
@@ -25,8 +26,6 @@ class ExampleAppWidgetProvider: AppWidgetProvider() {
                     PendingIntent.getActivity(context, 0, intent, 0)
                 }
             remoteViews.setOnClickPendingIntent(R.id.root_view, pendingIntent)
-
-
 
             val string = "$time, $appWidgetId"
             remoteViews.setTextViewText(R.id.cool, string)

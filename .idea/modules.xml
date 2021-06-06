@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Day_Counter.iml" filepath="$PROJECT_DIR$/.idea/modules/Day_Counter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/data/Day_Counter.data.iml" filepath="$PROJECT_DIR$/.idea/modules/data/Day_Counter.data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/domain/Day_Counter.domain.iml" filepath="$PROJECT_DIR$/.idea/modules/domain/Day_Counter.domain.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/presentation/Day_Counter.presentation.iml" filepath="$PROJECT_DIR$/.idea/modules/presentation/Day_Counter.presentation.iml" />
+    </modules>
+  </component>
+</project>

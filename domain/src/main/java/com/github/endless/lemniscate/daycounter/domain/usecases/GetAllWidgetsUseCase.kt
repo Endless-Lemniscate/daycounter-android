@@ -2,10 +2,11 @@ package com.github.endless.lemniscate.daycounter.domain.usecases
 
 import com.github.endless.lemniscate.daycounter.domain.models.Widget
 import com.github.endless.lemniscate.daycounter.domain.repositories.WidgetRepository
+import javax.inject.Inject
 
-class AddWidgetUseCase(private val widgetRepository: WidgetRepository) {
+class GetAllWidgetsUseCase @Inject constructor(private val widgetRepository: WidgetRepository) {
 
-    suspend fun add(widget: Widget) {
-        widgetRepository.upsertWidget(widget)
+    fun get(widgetId: Int): Widget {
+        return widgetRepository.getWidgetById(widgetId)
     }
 }
