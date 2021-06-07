@@ -34,7 +34,7 @@ class WidgetListAdapter: RecyclerView.Adapter<WidgetListAdapter.ViewHolder>() {
         fun bind(widget: Widget) {
             binding.title.text = widget.title
             binding.date.text = widget.date.toString()
-            binding.time.text = widget.date.toString()
+            binding.time.text = widget.days()
         }
     }
 

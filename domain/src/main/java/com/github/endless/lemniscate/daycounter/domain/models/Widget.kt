@@ -8,4 +8,8 @@ data class Widget(
     var date: Date,
     var shape: WidgetShape,
     var color: Int
-)
+) {
+    fun days(): String {
+        return "16 days"
+    }
+}
