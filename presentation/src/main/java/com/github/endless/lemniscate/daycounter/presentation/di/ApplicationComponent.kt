@@ -1,6 +1,6 @@
 package com.github.endless.lemniscate.daycounter.presentation.di
 
-import com.github.endless.lemniscate.daycounter.domain.usecases.GetAllWidgetsUseCase
+import com.github.endless.lemniscate.daycounter.presentation.ExampleAppWidgetProvider
 import com.github.endless.lemniscate.daycounter.presentation.ui.configure.ConfigureViewModel
 import com.github.endless.lemniscate.daycounter.presentation.ui.list.WidgetListViewModel
 import dagger.Component
@@ -11,4 +11,5 @@ import javax.inject.Singleton
 interface ApplicationComponent {
     fun inject(widgetListViewModel: WidgetListViewModel)
     fun inject(configureViewModel: ConfigureViewModel)
+    fun inject(exampleAppWidgetProvider: ExampleAppWidgetProvider)
 }

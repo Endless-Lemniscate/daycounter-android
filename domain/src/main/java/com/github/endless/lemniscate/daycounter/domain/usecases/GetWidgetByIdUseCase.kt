@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class GetWidgetByIdUseCase @Inject constructor(private val widgetRepository: WidgetRepository) {
 
-    fun get(widgetId: Int): Widget {
-        return widgetRepository.getWidgetById(widgetId)
+    fun get(id: Int): Widget {
+        return widgetRepository.getWidgetById(id)
     }
 }

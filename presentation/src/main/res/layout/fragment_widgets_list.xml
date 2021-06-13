@@ -4,14 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@color/background_dark"
     tools:context=".presentation.ui.list.WidgetsListFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/widgets_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:itemCount="10"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/_60sdp"
+        android:clipToPadding="false"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/widget_list_item"/>
 

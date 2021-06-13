@@ -30,23 +30,27 @@ class ConfigureActivity: AppCompatActivity() {
 
         binding.idHolder.text = appWidgetId.toString()
 
-        val appWidgetManager: AppWidgetManager = AppWidgetManager.getInstance(this)
-        RemoteViews(packageName, R.layout.example_appwidget).also { views->
-            appWidgetManager.updateAppWidget(appWidgetId, views)
-        }
+        val widget = Widget(
+            id = appWidgetId,
+            title = "title",
+            shape = WidgetShape.Ellipse,
+            color = 1,
+            date = Date()
+        )
+        viewModel.createWidget(widget)
 
         binding.buttonAddWidget.setOnClickListener {
+
+            val appWidgetManager: AppWidgetManager = AppWidgetManager.getInstance(this)
+            val view = RemoteViews(packageName, R.layout.example_appwidget)
+
+            // Set days
+            view.setTextViewText(R.id.days, appWidgetId.toString())
+            appWidgetManager.updateAppWidget(appWidgetId, view)
+
             val resultValue = Intent().apply {
                 putExtra(AppWidgetManager.EXTRA_APPWIDGET_ID, appWidgetId)
             }
-            val widget = Widget(
-                id = appWidgetId,
-                title = "title",
-                shape = WidgetShape.Ellipse,
-                color = 1,
-                date = Date()
-            )
-            viewModel.createWidget(widget)
             setResult(Activity.RESULT_OK, resultValue)
             finish()
         }

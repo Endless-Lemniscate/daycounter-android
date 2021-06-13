@@ -1,11 +1,9 @@
 package com.github.endless.lemniscate.daycounter.presentation.ui
 
-import android.app.Activity
-import android.appwidget.AppWidgetManager
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.RemoteViews
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI
 import com.github.endless.lemniscate.daycounter.R
 import com.github.endless.lemniscate.daycounter.databinding.ActivityMainBinding
 
@@ -18,6 +16,10 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         val view = binding.root
         setContentView(view)
+
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        NavigationUI.setupWithNavController(binding.bottomNavigation, navHostFragment.navController)
     }
 
 }

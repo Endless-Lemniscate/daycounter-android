@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/root_view"
-    tools:background="@color/black"
+    tools:background="#000000"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <ImageView
@@ -17,13 +17,14 @@
         android:src="@drawable/widget_shape_ellipse"/>
 
     <TextView
+        android:id="@+id/days"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:paddingTop="14dp"
         android:textStyle="bold"
         android:textSize="20sp"
-        android:text="115" />
+        tools:text="115" />
 
     <TextView
         android:id="@+id/cool"

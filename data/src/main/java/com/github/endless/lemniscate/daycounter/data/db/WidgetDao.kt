@@ -17,6 +17,6 @@ interface WidgetDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertWidget(widget: RoomWidget)
 
-    @Delete
-    suspend fun deleteWidget(widget: RoomWidget)
+    @Query("DELETE FROM widget WHERE id = :id")
+    suspend fun deleteWidget(id: Int)
 }

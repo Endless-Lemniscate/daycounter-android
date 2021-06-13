@@ -11,4 +11,10 @@
         android:label="fragment_widgets_list"
         tools:layout="@layout/fragment_widgets_list" />
 
+    <fragment
+        android:id="@+id/preferencesFragment"
+        android:name="com.github.endless.lemniscate.daycounter.presentation.ui.preferences.PreferencesFragment"
+        android:label="fragment_preferences"
+        tools:layout="@layout/fragment_preferences" />
+
 </navigation>

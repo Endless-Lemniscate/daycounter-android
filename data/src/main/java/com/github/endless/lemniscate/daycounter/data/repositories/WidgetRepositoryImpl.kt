@@ -23,7 +23,7 @@ class WidgetRepositoryImpl @Inject constructor(private val widgetDao: WidgetDao)
         widgetDao.upsertWidget(widget.toData)
     }
 
-    override suspend fun deleteWidget(widget: Widget) {
-        widgetDao.deleteWidget(widget.toData)
+    override suspend fun deleteWidgetById(id: Int) {
+        widgetDao.deleteWidget(id)
     }
 }

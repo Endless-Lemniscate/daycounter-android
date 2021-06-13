@@ -9,6 +9,7 @@ import com.github.endless.lemniscate.daycounter.domain.usecases.UpsertWidgetUseC
 import com.github.endless.lemniscate.daycounter.presentation.App
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import java.util.*
 import javax.inject.Inject
 
 class ConfigureViewModel: ViewModel() {
@@ -16,29 +17,19 @@ class ConfigureViewModel: ViewModel() {
     @Inject
     lateinit var upsertWidgetUseCase: UpsertWidgetUseCase
 
-    private val _id = MutableLiveData<Int>()
-    val id: LiveData<Int> get() = _id
-
-    private val _title = MutableLiveData<String>()
-    val title: LiveData<String> get() = _title
-
-    private val _date = MutableLiveData<Int>()
-    val date: LiveData<Int> get() = _date
+    private val _widget = MutableLiveData<Widget>()
+    val widget: LiveData<Widget> get() = _widget
 
     init {
         App.applicationComponent.inject(this)
     }
 
-    fun updateId(id: Int) {
-        _id.value = id
-    }
-
     fun updateTitle(title: String) {
-        _title.value = title
+        _widget.value?.title = title
     }
 
-    fun updateDate(date: Int) {
-        _date.value = date
+    fun updateDate(date: Date) {
+        _widget.value?.date = date
     }
 
     fun createWidget(widget: Widget) = viewModelScope.launch(Dispatchers.IO) {
