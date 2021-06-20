@@ -3,7 +3,7 @@
     android:updatePeriodMillis="1000"
     android:initialLayout="@layout/example_appwidget"
     android:resizeMode="none"
-    android:configure="com.github.endless.lemniscate.daycounter.presentation.ui.configure.ConfigureActivity"
+    android:configure="com.github.endless.lemniscate.daycounter.presentation.ui.MainActivity"
     android:widgetCategory="home_screen">
 </appwidget-provider>
 

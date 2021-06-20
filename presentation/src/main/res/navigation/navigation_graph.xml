@@ -9,12 +9,26 @@
         android:id="@+id/widgetsListFragment"
         android:name="com.github.endless.lemniscate.daycounter.presentation.ui.list.WidgetsListFragment"
         android:label="fragment_widgets_list"
-        tools:layout="@layout/fragment_widgets_list" />
+        tools:layout="@layout/fragment_widgets_list" >
+        <action
+            android:id="@+id/action_widgetsListFragment_to_widgetConfigureFragment"
+            app:destination="@id/widgetConfigureFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/preferencesFragment"
         android:name="com.github.endless.lemniscate.daycounter.presentation.ui.preferences.PreferencesFragment"
         android:label="fragment_preferences"
         tools:layout="@layout/fragment_preferences" />
+
+    <fragment
+        android:id="@+id/widgetConfigureFragment"
+        android:name="com.github.endless.lemniscate.daycounter.presentation.ui.configure.WidgetConfigureFragment"
+        android:label="fragment_widget_configure"
+        tools:layout="@layout/fragment_widget_configure">
+        <argument
+            android:name="widgetId"
+            app:argType="integer" />
+    </fragment>
 
 </navigation>

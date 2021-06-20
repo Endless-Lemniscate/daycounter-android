@@ -12,7 +12,7 @@ import kotlinx.coroutines.launch
 import java.util.*
 import javax.inject.Inject
 
-class ConfigureViewModel: ViewModel() {
+class WidgetConfigureViewModel: ViewModel() {
 
     @Inject
     lateinit var upsertWidgetUseCase: UpsertWidgetUseCase
