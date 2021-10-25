@@ -5,7 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface WidgetRepository {
     fun getAllWidgets(): Flow<List<Widget>>
-    fun getWidgetById(id: Int): Widget
+    fun getWidgetById(id: Int): Widget?
     suspend fun upsertWidget(widget: Widget)
     suspend fun deleteWidgetById(id: Int)
 }

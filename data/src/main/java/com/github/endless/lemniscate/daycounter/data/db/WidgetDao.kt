@@ -12,7 +12,7 @@ interface WidgetDao {
 
     @Transaction
     @Query("Select * from widget WHERE id=:id ")
-    fun getWidgetById(id: Int): RoomWidget
+    fun getWidgetById(id: Int): RoomWidget?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun upsertWidget(widget: RoomWidget)

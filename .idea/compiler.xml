@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
-      <module name="Day_Counter.data" target="11" />
-      <module name="Day_Counter.presentation" target="11" />
+      <module name="Day_Counter.data" target="1.8" />
+      <module name="Day_Counter.presentation" target="1.8" />
       <module name="Deadline_app.data" target="11" />
       <module name="Deadline_app.presentation" target="11" />
     </bytecodeTargetLevel>
